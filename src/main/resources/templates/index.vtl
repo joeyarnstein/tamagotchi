@@ -1,0 +1,18 @@
+<h1>Make a pet</h1>
+
+<form action="/pet" method="post">
+  <label for="tama">Name your digital pet:</label>
+  <input type="text" name="tama" id="tama">
+  <label for="age">How old is it?:</label>
+  <input type="text" name="age" id="age">
+  <label for="image">Choose animal, cat, dinosaur, or frog:</label>
+  <input type="text" name="image" id="image">
+  <button type="submit" class="btn">Make a friend</button>
+</form>
+
+<ul>
+  #foreach ($pet in $pets)
+    <li>$pet.getName()</li>
+    <img src=$pet.getImage() alt="your friend" />
+  #end
+</ul>
